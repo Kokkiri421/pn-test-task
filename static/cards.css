@@ -1,0 +1,225 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 23px;
+    column-gap: 23px;
+    height: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #E5E5E5;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.card-select {
+    margin-right: 25px;
+}
+
+.card-select__placeholder {
+    width: 16px;
+    height: 16px;
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content__header {
+    flex-basis: calc(50% - 12px);
+}
+
+.card-content__container {
+    flex-basis: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-content__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.card-content__title .title-price {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FF0D29;
+    margin-right: 16px;
+}
+
+.card-content__title .title-type {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(94, 119, 157, 0.25);
+    border-radius: 32px;
+    padding: 5px 16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #232735;
+    cursor: pointer;
+}
+
+.card-content__title .title-type .hint {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: calc(50% - 16px);
+    width: auto;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 12px 18px;
+    color: #FFFFFF;
+    background-color: #00000090;
+    z-index: 1;
+}
+
+.card-content__title .title-type:hover .hint {
+    display: block;
+}
+
+.card-content__title .title-type .hint:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid #00000090;
+    border-right: 8px solid transparent;
+    left: 8px;
+    top: -14px;
+}
+
+.card-content__title .title-type svg {
+    margin-right: 9px;
+}
+
+.card-content__location {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.card-content__main {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.card-content__flat {
+    padding-right: 20px;
+    border-right: 1px solid #C4C4C4;
+    margin-right: 20px;
+}
+
+.card-content__footer {
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.card-content__footer .footer-icon {
+    position: absolute;
+    left: -19px;
+    top: 3px;
+}
+
+.card-side {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-side__label {
+    width: fit-content;
+    padding: 6px 9px;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: -25px;
+}
+
+.card-side__label .label-interpunct {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.card-side__label .label-interpunct svg {
+    fill: #DD4C5D;
+}
+
+.red-label {
+    background-color: #FFE4E4;
+    color: #DD4C5D;
+}
+
+.red-label .label-interpunct svg {
+    fill: #DD4C5D;
+}
+
+.blue-label {
+    background-color: #D6F5FF;
+    color: #0291C1;
+}
+
+.blue-label .label-interpunct svg {
+    fill: #0291C1;
+}
+
+.light-grey-label {
+    background-color: #EDEDED;
+    color: #686868;
+}
+
+.light-grey-label .label-interpunct svg {
+    fill: #686868;
+}
+
+.grey-label {
+    background-color: #CCCCCC;
+    color: #808080;
+}
+
+.grey-label .label-interpunct svg {
+    fill: #808080;
+}
+
+.card-side__img {
+    margin-top: 6px;
+    width: fit-content;
+    line-height: 0;
+    margin-left: auto;
+}
+
+.card-side__img img {
+    width: 127px;
+    height: 98px;
+}
+
+.card-side__date {
+    font-size: 13px;
+    line-height: 20px;
+    color: #9B9B9B;
+}
